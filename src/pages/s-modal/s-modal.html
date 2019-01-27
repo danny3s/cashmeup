@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ENVIAR</ion-title>
+    <ion-buttons end>
+        <button [navPush]="opcionpagopage" ion-button>
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list no-lines>
+        <div class="login-top">
+
+
+        <h4 style="margin-top:2%" text-center text-white>
+            Enviar CashMeUp
+          </h4>
+        </div>
+
+        <ion-item>
+            <ion-label floating>Ingresar direccion de envio</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="num"></ion-input>
+          
+        </ion-item>
+        <ion-item>
+            <button ion-button block color="primary" (click)="scanCode()" >Escanear</button>
+            
+        </ion-item>
+
+      
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="password"  placeholder="Cantidad"></ion-input>
+          
+        </ion-item>
+        
+
+        <ion-item>
+            <button ion-button block color="primary" (click)="signIn()" >Enviar</button>
+        </ion-item>
+      
+      </ion-list>
+
+
+</ion-content>

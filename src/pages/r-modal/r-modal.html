@@ -1,0 +1,54 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RECIBIR</ion-title>
+    <ion-buttons end>
+        <button [navPush]="home" ion-button>
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <ion-list no-lines>
+        <div class="login-top">
+
+
+        <h4 style="margin-top:2%" text-center text-white>
+            Generar QR
+          </h4>
+        </div>
+
+        <ion-item>
+        
+
+            <ion-item>
+                <ion-input [(ngModel)]="code" type="text" placeholder="Enter code here"></ion-input>
+              </ion-item>
+              <button ion-button full icon-left (click)="process()"><ion-icon name="barcode"></ion-icon>Generar Direccion</button>
+
+              <img class="qrcode" *ngIf="displayQrCode()" [src]="generated" />
+          
+
+              
+            
+        </ion-item>
+
+
+        
+
+
+        
+
+      
+      </ion-list>
+
+
+</ion-content>

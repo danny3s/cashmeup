@@ -1,0 +1,36 @@
+
+<ion-content padding class="bg-theme">
+
+    <video autoplay loop src="assets/video/wechat2.mp4"></video>
+    <h4 class="balance"><b>CMU:  12.820 COP</b></h4>
+
+
+  <ion-content class="home-bg">
+    <ion-grid col-11 col-sm-10>
+
+      <ion-row>
+        <ion-col col-6>
+          <ion-card>
+            <ion-card-content [navPush]="smodal">
+              <img src="assets/Icons/drawable-xxxhdpi/qrcode.png" alt="icon">
+              <p>Escanear</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6>
+          <ion-card>
+            <ion-card-content [navPush]="depositPage">
+              <img src="assets/Icons/drawable-xxxhdpi/nowifi.png" alt="icon">
+              <p>Ups, No internet!
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <button ion-button full icon-left class="hboton" [navPush]="home" ><ion-icon name="home"></ion-icon>Pagina Principal</button>
+
+
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>
