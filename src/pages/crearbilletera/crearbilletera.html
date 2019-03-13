@@ -1,0 +1,33 @@
+
+
+<ion-content class="bg-theme">
+
+    <ion-list style="margin-top:50%;" no-lines>
+
+
+
+
+            <ion-card>
+                <ion-card-content>
+                    <div style="text-align:center;">
+               
+                        <img  *ngIf="displayQrCode()" [src]="generated" />
+                      </div>
+
+                                
+            <ion-item>
+              
+                <ion-input disabled="true" [(ngModel)]="code" ></ion-input>
+
+           
+                
+              </ion-item>
+
+              <button ion-button block color="secondary" (click)="next()" >Guardar</button>
+                </ion-card-content>
+              </ion-card>
+        
+              
+      
+      </ion-list>
+</ion-content>

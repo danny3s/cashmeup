@@ -1,0 +1,37 @@
+
+
+<ion-content style="margin-top: 30%; text-align: center; background-color: #1c1f3f;" padding>
+
+  <div style="text-align: center;">
+    <h2 style="color: white;">Confirmar Clave</h2>
+    <p style="color: white;">Ingresa tu clave para confirmar las transacciones de tu billetera.</p>
+</div>
+
+  <table>
+
+   
+      <tr>
+        
+        <td>
+          <ion-input style="color: white;" type="number" #otp1 [(ngModel)]="uno"  pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp2)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input style="color: white;" type="number" #otp2 [(ngModel)]="dos" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp3)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input  style="color: white;" type="number" #otp3 [(ngModel)]="tres" pattern="[0-9]{6}" maxlength="10" size="1" (keyup)="next(otp4)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input style="color: white;" type="number" #otp4 [(ngModel)]="cuatro" pattern="[0-9]{6}" maxlength="1" size="1">
+          </ion-input>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+
+    <button ion-button block color="secondary" (click)="cambio(uno, dos, tres, cuatro)" >Siguiente</button>
+
+</ion-content>

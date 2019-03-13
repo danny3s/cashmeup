@@ -1,0 +1,36 @@
+page-regispasscode {
+
+  .bg-theme{
+    background:url(../assets/img/bg.png);
+    background-size: cover;
+    text-align: center;
+
+}
+
+
+    .otp {
+        color: darkgray;
+        border-style: none;
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+        text-align: center;
+        justify-content: center;
+        display: flex!important;
+         align-items: center!important;
+         
+         
+         
+      }
+      
+      td {
+        border: 3px solid white;
+      }
+      
+      table {
+        border-collapse: collapse;
+      }
+
+      
+
+}

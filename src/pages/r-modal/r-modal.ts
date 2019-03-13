@@ -31,6 +31,15 @@ export class RModalPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  ionViewWillLoad(){
+    const qrcode = QRCode;
+    const self = this;
+    qrcode.toDataURL(self.code, { errorCorrectionLevel: 'H' }, function (err, url) {
+      self.generated = url;
+    })
+
+  }
+
   displayQrCode() {
     return this.generated !== '';
   }

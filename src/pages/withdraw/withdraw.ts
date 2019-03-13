@@ -1,24 +1,66 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the WithdrawPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
+import { AlertController,NavController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
+import { AngularFireAuth } from 'angularfire2/auth';
+import QRCode from 'qrcode';
 @Component({
   selector: 'page-withdraw',
   templateUrl: 'withdraw.html',
 })
 export class WithdrawPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  qrData = null;
+  createdCode = null;
+  scannedCode = null;
+  public qrfood: string;
+
+
+  cedu;
+
+
+
+
+
+  
+  code;
+  generated = '';
+
+  constructor(public alertCtrl: AlertController,public navController:NavController,private afDatabase: AngularFireDatabase, private Auth: AngularFireAuth) {
+  } 
+
+  ionViewWillLoad(){
+
+    
+    this.Auth.authState.subscribe( data =>{
+
+      
+      this.afDatabase.list(`Users/${data.uid}/datos`)
+      .valueChanges()
+      .subscribe(res => {
+        this.code = res[2];
+
+        const qrcode = QRCode;
+        const self = this;
+        qrcode.toDataURL(self.code, { errorCorrectionLevel: 'H' }, function (err, url) {
+          self.generated = url;
+        })
+
+
+      })
+
+  
+        
+    });
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WithdrawPage');
+
+  
+
+  displayQrCode() {
+    return this.generated !== '';
   }
 
 }

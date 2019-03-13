@@ -1,0 +1,41 @@
+<ion-content>
+    <ion-content class="bg-theme">
+      <div>
+          <ion-grid col-11 col-sm-10>
+            <ion-row>
+                <ion-col col-12 text-center>
+                    <img src="assets/Icons/logo2.png" alt="logo">
+                </ion-col>
+            </ion-row>
+          </ion-grid>
+      </div>
+      <div padding class="bg-theme">
+                  <ion-grid col-11 col-sm-10 style="padding-top: 2rem 0;">
+
+                    <ion-row>
+                        <ion-col class="form-theme">
+                            <ion-input style="background-color: transparent;border-top: double white; border-bottom: double white; color:white;" type="text" placeholder="Usuario" [(ngModel)]="user.usuario" class="input"></ion-input>
+                            <br>
+                            <ion-input style="background-color: transparent;border-top: double white; border-bottom: double white;"  type="text" placeholder="Nombres" [(ngModel)]="user.nombre" class="input"></ion-input>
+                            <br>
+                            <ion-input style="background-color: transparent;border-top: double white; border-bottom: double white;"  type="text" placeholder="Apellidos" [(ngModel)]="user.apellido" class="input"></ion-input>
+                            <br>
+                            <ion-input style="background-color: transparent;border-top: double white; border-bottom: double white;"  type="text" placeholder="Celular" [(ngModel)]="user.celular" class="input"></ion-input>
+                            <br>
+                            <ion-input style="background-color: transparent;border-top: double white; border-bottom: double white;"  type="text" placeholder="Cedula" [(ngModel)]="user.cedula" class="input"></ion-input>
+                       
+                        </ion-col>
+                    </ion-row>
+
+ 
+                      <ion-row>
+                          <ion-col col-12>
+                              <button ion-button color="primary" block class="btn-theme-big-red" (click)="crearperfil(perfil)"><b>Sign up</b></button>
+                          </ion-col>
+                      </ion-row>
+                  </ion-grid>
+          
+          </div>
+  
+  </ion-content>
+</ion-content>

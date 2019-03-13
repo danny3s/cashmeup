@@ -13,6 +13,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { AccountPage } from '../pages/account/account';
 import { WithdrawPage } from '../pages/withdraw/withdraw';
 import {OpcionpagoPage} from '../pages/opcionpago/opcionpago';
+import {RegispasscodePage} from '../pages/regispasscode/regispasscode';
+import {CrearbilleteraPage} from '../pages/crearbilletera/crearbilletera';
+import {CrearperfilPage} from '../pages/crearperfil/crearperfil';
+import {SModalPage} from '../pages/s-modal/s-modal';
+import {ChatPage} from '../pages/chat/chat';
+
+import { TabsPage } from '../pages/tabs/tabs';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +33,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HomePage the root (or first) page
-  rootPage = SigninPage
+  rootPage = (SigninPage)
   pages: Array<{title: string, component: any}>;
 
   constructor(

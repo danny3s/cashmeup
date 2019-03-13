@@ -1,52 +1,84 @@
 
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>ENVIAR</ion-title>
-    <ion-buttons end>
-        <button [navPush]="opcionpagopage" ion-button>
-          <ion-icon name="close"></ion-icon>
-        </button>
-      </ion-buttons>
-  </ion-navbar>
 
 
-</ion-header>
+<ion-content style="background-color: #1c1f3f;" padding>
 
 
-<ion-content padding>
+      <ion-grid style="margin-top:50%;">
+          <ion-row>
+              <ion-col class="form-theme">
+                  <ion-item>
+                      
+                      <ion-label floating>&nbsp;&nbsp;&nbsp;&nbsp;Ingresar direccion de envio</ion-label>
+                      <ion-input type="text" value="" [(ngModel)]="num"></ion-input>
+                      <ion-icon color="dark" name="ios-lock-outline" item-end></ion-icon>
+                    
+                  </ion-item>
+                  <button ion-button block color="primary" (click)="scanCode()" >Escanear</button>
 
-    <ion-list no-lines>
-        <div class="login-top">
 
-
-        <h4 style="margin-top:2%" text-center text-white>
-            Enviar CashMeUp
-          </h4>
-        </div>
-
+                        
         <ion-item>
-            <ion-label floating>Ingresar direccion de envio</ion-label>
-            <ion-input type="text" value="" [(ngModel)]="num"></ion-input>
-          
-        </ion-item>
-        <ion-item>
-            <button ion-button block color="primary" (click)="scanCode()" >Escanear</button>
+            <ion-label floating>&nbsp;&nbsp;&nbsp;&nbsp;Cantidad</ion-label>
+            <ion-input type="number"  [(ngModel)]="password"  ></ion-input>
             
-        </ion-item>
-
-      
-        <ion-item>
-          <ion-input type="number"  [(ngModel)]="password"  placeholder="Cantidad"></ion-input>
+          </ion-item>
           
-        </ion-item>
-        
+  
+              <button ion-button block color="primary" (click)="signIn()" >Enviar</button>
 
-        <ion-item>
-            <button ion-button block color="primary" (click)="signIn()" >Enviar</button>
-        </ion-item>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
       
-      </ion-list>
 
+
+</ion-content>
+
+
+<ion-content class="bg-theme">
+    <div class="bg-white">
+        <ion-grid col-11 col-sm-10>
+            <ion-row>
+                <ion-col col-12 text-center>
+                    <img src="assets/Icons/logo2.png" alt="logo" class="logo">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div padding class="bg-theme">
+                <ion-grid col-11 col-sm-10 style="padding-top: 2rem 0;">
+                    <ion-row>
+                        <ion-col class="form-theme">
+ 
+
+                              <ion-grid>
+                                  <ion-row>
+                                    <ion-col col-10>
+                                        <ion-input type="text" [(ngModel)]="num" placeholder="Ingrese Dirección" class="input"></ion-input>
+                                    </ion-col>
+                                    <ion-col col-2>
+                                        <button ion-button block color="primary" (click)="scanCode()" >
+                                            <ion-icon style="color: white;" name="qr-scanner"></ion-icon>
+                                        </button>
+                                    </ion-col>
+                                  </ion-row>
+                            
+
+                            <ion-input type="number"  [(ngModel)]="cantidad" placeholder="Ingrese Cantidad" class="input"></ion-input>
+
+                          </ion-grid>
+                         
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>
+                            <button ion-button color="primary" block class="btn-theme-big-red" (click)="signIn($event,num,cantidad)"><b>Enviar</b></button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+        
+        </div>
 
 </ion-content>

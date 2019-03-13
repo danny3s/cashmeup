@@ -2,88 +2,91 @@
 
 <ion-content class="bg-theme">
 
-    <video autoplay loop src="assets/video/wechat.mp4"></video>
-    <h4 class="balance"><b>CMU:  12.820 COP</b></h4>
     
+  
 
-  <ion-content class="home-bg">
 
+    <h4 class="balance"><b>Balance:  {{balance}}</b></h4>
 
-    <ion-grid col-11 col-sm-10>    
+    
+    <ion-grid style="margin-top: 55%;" col-11 col-sm-10>    
       <ion-row>
-        <ion-col col-4>
-          <ion-card>
+
+        <ion-col col-3>
+          <ion-card style="border: none !important;">
             <ion-card-content [navPush]="opcionpagopage">
-              <img src="assets/Icons/drawable-xxxhdpi/send.png" alt="icon">
-              <p>Pagar</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4>
-            <ion-card>
-              <ion-card-content [navPush]="rmodal">
-                <img src="assets/Icons/drawable-xxxhdpi/recibir.png" alt="icon">
-                <p>Recibir</p>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        <ion-col col-4>
-          <ion-card>
-            <ion-card-content [navPush]="depositPage">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_availibility.png" alt="icon">
+              <img src="assets/Icons/drawable-xxxhdpi/depositar.png" alt="icon">
+            
               <p>Depositar</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-3>
+            <ion-card>
+              <ion-card-content [navPush]="rmodal">
+                <img src="assets/Icons/drawable-xxxhdpi/retirar.png" alt="icon">
+                <p>Retirar</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        <ion-col col-3>
+          <ion-card>
+            <ion-card-content [navPush]="depositPage">
+              <img style="width: 70%;" src="assets/Icons/drawable-xxxhdpi/impuestos.png" alt="icon">
+              <p>Impuestos</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-3>
           <ion-card>
             <ion-card-content [navPush]="withdrawPage">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_appointment.png" alt="icon">
-              <p>Retirar</p>
+              <img style="width: 85%;" src="assets/Icons/drawable-xxxhdpi/recibir.png" alt="icon">
+              <p>Recibir</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col col-4>
-          <ion-card>
-            <ion-card-content [navPush]="historyPage">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_testimonials.png" alt="icon">
-              <p>Historial</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4>
-          <ion-card>
-            <ion-card-content [navPush]="profilePage">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_about_us.png" alt="icon">
-              <p>Perfil</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4>
-         <ion-card> 
-            <ion-card-content [navPush]="termsPage">
-              <img src="assets/Icons/drawable-xxxhdpi/card.png" alt="icon">
-              <p>Documentos</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4>
-          <ion-card>
-            <ion-card-content [navPush]="contactPage">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_contatc_us.png" alt="icon">
-              <p>Contactenos</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4>
-          <ion-card>
-            <ion-card-content (click)="confirmLogout()">
-              <img src="assets/Icons/drawable-xxxhdpi/ic_blog.png" alt="icon">
-              <p>Salir</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
+
+        
+        <ion-col col-3>
+            <ion-card style="border: none !important;">
+              <ion-card-content [navPush]="opcionpagopage">
+                <img src="assets/Icons/drawable-xxxhdpi/donaciones.png" alt="icon">
+              
+                <p>Donaciones</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-3>
+              <ion-card>
+                <ion-card-content [navPush]="rmodal">
+                  <img style="width: 70%;" src="assets/Icons/drawable-xxxhdpi/recargar.png" alt="icon">
+                  <p>Recargar</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          <ion-col col-3>
+            <ion-card>
+              <ion-card-content [navPush]="depositPage">
+                <img  src="assets/Icons/drawable-xxxhdpi/ahorros.png" alt="icon">
+                <p>Ahorros</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-3>
+            <ion-card>
+              <ion-card-content [navPush]="withdrawPage">
+                <img  src="assets/Icons/drawable-xxxhdpi/documentos.png" alt="icon">
+                <p>Documentos</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
       </ion-row>
     </ion-grid>
-  </ion-content>
+
+    <ion-fab bottom right>
+        <button style="background-color: #22223e;" [navPush]="smodal" ion-fab><ion-icon name="custom-codigo"></ion-icon></button>
+     </ion-fab>
+
+
 </ion-content>
